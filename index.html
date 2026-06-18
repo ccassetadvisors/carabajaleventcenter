@@ -489,7 +489,7 @@ img{max-width:100%;display:block}
   .frow{grid-template-columns:1fr}
 }
 @media(max-width:480px){
-  .occasions{grid-template-columns:1fr}.masonry{columns:2;column-gap:12px}
+  .masonry{columns:2;column-gap:12px}
   .pagehero{padding-top:140px}
 }
 
@@ -515,6 +515,65 @@ img{max-width:100%;display:block}
 @media(max-width:560px){.cards.cards4{grid-template-columns:1fr}}
 /* keep inline stat line readable on small screens */
 @media(max-width:420px){.statline{grid-template-columns:1fr 1fr}}
+
+/* ===================== MOBILE OVERHAUL ===================== */
+.sec-occ{padding:0 0 120px}
+@media(max-width:900px){
+  /* remove decorative gold geometry + floating badges that crowd/overlap copy */
+  .framed .fbar,.why-figure .frame,.why-figure .corner,.why-badge,.gstrip .gc .gring,.occ .oring{display:none!important}
+  /* scroll cue overlaps hero buttons/chips on small screens */
+  .scrollcue{display:none!important}
+}
+@media(max-width:760px){
+  /* ---- hero: legible text over photo ---- */
+  .hero{min-height:80vh}
+  .hero-grad{background:linear-gradient(180deg,rgba(14,12,9,.5) 0%,rgba(14,12,9,.32) 36%,rgba(12,10,7,.74) 76%,rgba(10,8,6,.93) 100%)}
+  .hero-vig{box-shadow:inset 0 0 160px 30px rgba(10,8,6,.6)}
+  .hero-inner{padding:0 26px 52px}
+  .hero h1{font-size:40px;line-height:1.08;text-shadow:0 3px 26px rgba(0,0,0,.7)}
+  .hero h1 .q{font-size:54px}
+  .hero-eyebrow .t{font-size:11px;letter-spacing:.24em}
+  .hero p.lead{font-size:16px;color:#F4EEDF;margin-top:20px}
+  .hero-chips{gap:11px;margin-top:24px}
+  .hero-chips .btn{width:100%;justify-content:center}
+  .hero-split .hs-text{padding:118px 26px 64px;min-height:78vh;justify-content:flex-end}
+  .hero-split .hs-text .btn{width:100%;justify-content:center}
+  .hero-split .hs-img{min-height:44vh}
+
+  /* ---- keep texture, lose the ring "rays" + heavy vignette so words stay clear ---- */
+  .bg-cream{background:
+    repeating-linear-gradient(45deg,rgba(138,107,22,.016) 0 1px,transparent 1px 9px),
+    radial-gradient(90% 42% at 50% 0%,rgba(201,162,39,.05),transparent 62%),
+    linear-gradient(180deg,var(--cream-2),var(--cream))}
+  .bg-blush{background:
+    radial-gradient(rgba(138,107,22,.035) 1px,transparent 1.6px) 0 0/32px 32px,
+    radial-gradient(85% 42% at 84% 0%,rgba(201,162,39,.06),transparent 62%),
+    linear-gradient(180deg,#FBF6EE,#F3EBDB)}
+  .bg-cream,.bg-blush{box-shadow:inset 0 1px 0 rgba(255,255,255,.5)}
+
+  /* ---- rhythm + spacing ---- */
+  .section-pad{padding:64px 0}.section-pad-sm{padding:56px 0}
+  .sec-occ{padding:44px 0 64px}
+  .head-c{margin-bottom:36px}.head-c .script{font-size:29px}.head-c h2{font-size:30px}
+  .pagehero{padding:122px 0 50px}
+  .intro-h{font-size:27px;margin:18px 0 20px}
+  .intro-p{font-size:16px;line-height:1.8}
+  .dropcap::first-letter{font-size:48px;padding:4px 10px 0 0}
+
+  /* ---- tappable CTAs ---- */
+  .btn{padding:16px 24px}
+  .cta-inner .btn,.pricecall .btn,.formcard .btn{width:100%;justify-content:center}
+  .cta h2{font-size:34px}
+  .why h2,.featrow h2{font-size:30px}
+
+  /* cards / stats breathing room */
+  .card{padding:38px 28px 34px}
+  .stat{padding:30px 18px}.stat .n{font-size:40px}
+}
+@media(max-width:420px){
+  .hero h1{font-size:35px}.hero h1 .q{font-size:46px}
+  .hero-chips .btn,.btn{font-size:12px;letter-spacing:.14em}
+}
 
 </style>
 </head>
@@ -579,7 +638,7 @@ img{max-width:100%;display:block}
     </div>
   </section>
 
-  <section class="section bg-cream" style="padding:0 0 120px">
+  <section class="section bg-cream sec-occ">
     <div class="wrap">
       <div class="head-c reveal"><span class="script">Made for the moment</span><h2>An occasion for every reason to gather</h2><span class="divider" style="margin-top:18px"><span class="ln"></span><span class="dot"></span><span class="gem"></span><span class="dot"></span><span class="ln r"></span></span></div>
       <div class="occasions">
