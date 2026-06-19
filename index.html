@@ -507,7 +507,9 @@ img{max-width:100%;display:block}
 .cta.solid .cta-grad{background:radial-gradient(80% 90% at 50% 120%,rgba(201,162,39,.30),transparent 60%)}
 
 /* signature script accent under text */
-.sig{font-family:'Pinyon Script',cursive;font-size:42px;color:var(--ink);line-height:1;display:inline-block}
+.sig{font-family:'Pinyon Script',cursive;font-size:29px;color:var(--ink);line-height:1;display:inline-block;
+  position:relative;transform:rotate(-3deg);transform-origin:left center;padding:0 10px 7px 2px;margin-top:4px}
+.sig::after{content:"";position:absolute;left:2px;right:14px;bottom:2px;height:1px;background:linear-gradient(90deg,var(--gold),rgba(201,162,39,0))}
 
 /* 4-up card row (home packages teaser) — responsive */
 .cards.cards4{grid-template-columns:repeat(4,1fr)}
@@ -517,7 +519,7 @@ img{max-width:100%;display:block}
 @media(max-width:420px){.statline{grid-template-columns:1fr 1fr}}
 
 /* ===================== MOBILE OVERHAUL ===================== */
-.sec-occ{padding:0 0 120px}
+.sec-occ{padding:60px 0 120px}
 @media(max-width:900px){
   /* remove decorative gold geometry + floating badges that crowd/overlap copy */
   .framed .fbar,.why-figure .frame,.why-figure .corner,.why-badge,.gstrip .gc .gring,.occ .oring{display:none!important}
@@ -575,6 +577,13 @@ img{max-width:100%;display:block}
   .hero-chips .btn,.btn{font-size:12px;letter-spacing:.14em}
 }
 
+/* full-width "The Weekend" package */
+.pkg.span{grid-column:1/-1;display:block;background:linear-gradient(180deg,#FFFDF6,#FBF4E2);border-color:rgba(201,162,39,.32)}
+.pkg.span .wk{display:grid;grid-template-columns:1.08fr 1fr;gap:48px;align-items:center}
+.pkg.span h3{margin-bottom:10px}
+.pkg.span .pkdesc{margin-bottom:0}
+@media(max-width:760px){.pkg.span .wk{grid-template-columns:1fr;gap:22px}}
+
 </style>
 </head>
 <body>
@@ -594,7 +603,7 @@ img{max-width:100%;display:block}
         <a class="lnk" href="Packages.html">Packages</a>
         <a class="lnk" href="Gallery.html">Gallery</a>
         <a class="lnk" href="Contact.html">Contact</a>
-        <a class="callbtn" href="tel:18065492577">(806) 549-2577</a>
+        <a class="callbtn" href="tel:18069285767">(806) 928-5767</a>
       </nav>
     </div>
   </header>
@@ -620,7 +629,7 @@ img{max-width:100%;display:block}
       <div class="hero-eyebrow reveal"><span class="l"></span><span class="t">Lubbock, Texas · 1809 N Ash</span></div>
       <h1 class="reveal d1">Where every occasion<br>becomes a <span class="q">celebration</span></h1>
       <p class="lead reveal d2">A beautiful, blank-canvas venue for weddings, quinceañeras, and life’s most important gatherings — made simple, made warm, made yours.</p>
-      <div class="hero-chips reveal d3" style="gap:16px"><a class="btn btn-cream" href="tel:18065492577">Call or Text · (806) 549-2577</a><a class="btn btn-outline" href="Packages.html">View Packages</a></div>
+      <div class="hero-chips reveal d3" style="gap:16px"><a class="btn btn-cream" href="tel:18069285767">Call or Text · (806) 928-5767</a><a class="btn btn-outline" href="Packages.html">View Packages</a></div>
     </div>
     <a href="#welcome" class="scrollcue"><span class="lbl">Scroll</span><span class="track"></span></a>
   </section>
@@ -657,7 +666,7 @@ img{max-width:100%;display:block}
         <span class="eyebrow reveal">The Space</span>
         <h2 class="reveal d1" style="margin-top:22px">A bright, open hall ready to become anything you imagine.</h2>
         <p class="fp reveal d1">Warm wood-look floors, soft recessed lighting, a built-in stage, and a covered brick entrance for grand arrivals. Bring your own décor, florals, and caterer — or work with our preferred vendors — and watch the room transform.</p>
-        <div class="statline reveal d2"><div><div class="n">150</div><div class="l">Guest capacity</div></div><div><div class="n">7 days</div><div class="l">Available a week</div></div><div><div class="n">Yours</div><div class="l">To transform</div></div></div>
+        <div class="statline reveal d2"><div><div class="n">225</div><div class="l">Guest capacity</div></div><div><div class="n">7 days</div><div class="l">Available a week</div></div><div><div class="n">Yours</div><div class="l">To transform</div></div></div>
       </div>
     </div>
   </section>
@@ -704,7 +713,7 @@ img{max-width:100%;display:block}
         <div class="card reveal" style="border-color:rgba(201,162,39,.45)"><div class="num" style="font-style:normal;-webkit-text-stroke:0;color:var(--gold-d);font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-family:'Jost',sans-serif">Evening</div><h3 style="font-size:30px">Celebration</h3><p>8 hours · venue, tables &amp; chairs, 2 hours setup, and cleanup time.</p></div>
         <div class="card reveal"><div class="num" style="font-style:normal;-webkit-text-stroke:0;color:var(--gold-d);font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-family:'Jost',sans-serif">Full day</div><h3 style="font-size:30px">Signature</h3><p>Full day for weddings &amp; quinceañeras · setup through breakdown.</p></div>
       </div>
-      <p class="reveal" style="text-align:center;font-weight:300;font-size:14px;color:var(--ink-mute);margin:24px 0 0">Transparent, accessible pricing — call or text <a href="tel:18065492577" style="color:var(--gold-d);border-bottom:1px solid rgba(154,123,26,.4)">(806) 549-2577</a> for current rates and availability.</p>
+      <p class="reveal" style="text-align:center;font-weight:300;font-size:14px;color:var(--ink-mute);margin:24px 0 0">Transparent, accessible pricing — call or text <a href="tel:18069285767" style="color:var(--gold-d);border-bottom:1px solid rgba(154,123,26,.4)">(806) 928-5767</a> for current rates and availability.</p>
     </div>
   </section>
 
@@ -729,7 +738,7 @@ img{max-width:100%;display:block}
       <span class="script reveal">Let’s plan it together</span>
       <h2 class="reveal d1">Reserve your date at Carabajal</h2>
       <p class="reveal d1">Tell us about your celebration and we’ll walk you through dates, layouts, and pricing — usually within the hour.</p>
-      <div class="reveal d2" style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap"><a class="btn btn-cream" href="tel:18065492577">Call or Text (806) 549-2577</a><a class="btn btn-outline" href="Contact.html">Request a tour</a></div>
+      <div class="reveal d2" style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap"><a class="btn btn-cream" href="tel:18069285767">Call or Text (806) 928-5767</a><a class="btn btn-outline" href="Contact.html">Request a tour</a></div>
     </div>
   </section>
 
@@ -751,7 +760,7 @@ img{max-width:100%;display:block}
             <a href="Contact.html">Contact</a>
           </div></div>
         <div class="fcol"><h4>Visit</h4><p>1809 N Ash<br>Lubbock, TX 79415</p><p style="color:#9A9384;margin-top:16px">Open by appointment,<br>seven days a week</p></div>
-        <div class="fcol"><h4>Contact</h4><div class="flist"><a href="tel:18065492577">(806) 549-2577</a><a href="mailto:jana@poka.com">jana@poka.com</a></div></div>
+        <div class="fcol"><h4>Contact</h4><div class="flist"><a href="tel:18069285767">(806) 928-5767</a><a href="mailto:jana@poka.com">jana@poka.com</a></div></div>
       </div>
       <div class="fbottom"><span>© 2026 Carabajal Event Center · Lubbock, Texas</span><span>Family-owned <span class="heart">&#9829;</span> Proudly serving West Texas</span></div>
     </div>

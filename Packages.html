@@ -507,7 +507,9 @@ img{max-width:100%;display:block}
 .cta.solid .cta-grad{background:radial-gradient(80% 90% at 50% 120%,rgba(201,162,39,.30),transparent 60%)}
 
 /* signature script accent under text */
-.sig{font-family:'Pinyon Script',cursive;font-size:42px;color:var(--ink);line-height:1;display:inline-block}
+.sig{font-family:'Pinyon Script',cursive;font-size:29px;color:var(--ink);line-height:1;display:inline-block;
+  position:relative;transform:rotate(-3deg);transform-origin:left center;padding:0 10px 7px 2px;margin-top:4px}
+.sig::after{content:"";position:absolute;left:2px;right:14px;bottom:2px;height:1px;background:linear-gradient(90deg,var(--gold),rgba(201,162,39,0))}
 
 /* 4-up card row (home packages teaser) — responsive */
 .cards.cards4{grid-template-columns:repeat(4,1fr)}
@@ -517,7 +519,7 @@ img{max-width:100%;display:block}
 @media(max-width:420px){.statline{grid-template-columns:1fr 1fr}}
 
 /* ===================== MOBILE OVERHAUL ===================== */
-.sec-occ{padding:0 0 120px}
+.sec-occ{padding:60px 0 120px}
 @media(max-width:900px){
   /* remove decorative gold geometry + floating badges that crowd/overlap copy */
   .framed .fbar,.why-figure .frame,.why-figure .corner,.why-badge,.gstrip .gc .gring,.occ .oring{display:none!important}
@@ -575,6 +577,13 @@ img{max-width:100%;display:block}
   .hero-chips .btn,.btn{font-size:12px;letter-spacing:.14em}
 }
 
+/* full-width "The Weekend" package */
+.pkg.span{grid-column:1/-1;display:block;background:linear-gradient(180deg,#FFFDF6,#FBF4E2);border-color:rgba(201,162,39,.32)}
+.pkg.span .wk{display:grid;grid-template-columns:1.08fr 1fr;gap:48px;align-items:center}
+.pkg.span h3{margin-bottom:10px}
+.pkg.span .pkdesc{margin-bottom:0}
+@media(max-width:760px){.pkg.span .wk{grid-template-columns:1fr;gap:22px}}
+
 </style>
 </head>
 <body>
@@ -594,7 +603,7 @@ img{max-width:100%;display:block}
         <a class="lnk active" href="Packages.html">Packages</a>
         <a class="lnk" href="Gallery.html">Gallery</a>
         <a class="lnk" href="Contact.html">Contact</a>
-        <a class="callbtn" href="tel:18065492577">(806) 549-2577</a>
+        <a class="callbtn" href="tel:18069285767">(806) 928-5767</a>
       </nav>
     </div>
   </header>
@@ -612,10 +621,23 @@ img{max-width:100%;display:block}
   <section class="section bg-cream" style="padding:20px 0 100px">
     <div class="wrap">
       <div class="pkgs">
-        <div class="pkg reveal"><div class="pkhead"><span class="pkcat">Intimate gathering</span><span class="pkhrs">4 hours</span></div><h3>Micro Event</h3><p class="pkdesc">Our most accessible option — ideal for showers, meetings, baptism receptions, and intimate gatherings.</p><div class="pklist"><div class="pkli"><span class="gm"></span><span>Exclusive use of the hall for 4 hours</span></div><div class="pkli"><span class="gm"></span><span>Round banquet tables &amp; chairs included</span></div><div class="pkli"><span class="gm"></span><span>Covered brick entrance &amp; parking</span></div></div><div style="margin-top:auto"><a class="btn btn-outline-ink" href="tel:18065492577" style="width:100%%;justify-content:center">Inquire about this package</a></div></div>
-        <div class="pkg reveal"><div class="pkhead"><span class="pkcat">Half-day celebration</span><span class="pkhrs">6 hours</span></div><h3>Social</h3><p class="pkdesc">A little more room to breathe — for birthdays, graduations, baby showers, and family parties.</p><div class="pklist"><div class="pkli"><span class="gm"></span><span>Exclusive use of the hall for 6 hours</span></div><div class="pkli"><span class="gm"></span><span>Tables &amp; chairs, plus 1 hour of setup access</span></div><div class="pkli"><span class="gm"></span><span>Built-in stage &amp; event lighting</span></div></div><div style="margin-top:auto"><a class="btn btn-outline-ink" href="tel:18065492577" style="width:100%%;justify-content:center">Inquire about this package</a></div></div>
-        <div class="pkg reveal"><div class="pkhead"><span class="pkcat">Evening reception</span><span class="pkhrs">8 hours</span></div><h3>Celebration</h3><p class="pkdesc">A full evening for larger receptions and milestone parties, with generous time to set up and clean up.</p><div class="pklist"><div class="pkli"><span class="gm"></span><span>Exclusive use of the hall for 8 hours</span></div><div class="pkli"><span class="gm"></span><span>Tables &amp; chairs, 2 hours of setup access</span></div><div class="pkli"><span class="gm"></span><span>Dedicated cleanup time included</span></div></div><div style="margin-top:auto"><a class="btn btn-outline-ink" href="tel:18065492577" style="width:100%%;justify-content:center">Inquire about this package</a></div></div>
-        <div class="pkg feat reveal"><span class="pkribbon">Most loved</span><div class="pkhead"><span class="pkcat">The full-day experience</span><span class="pkhrs">10–12 hrs</span></div><h3>Signature</h3><p class="pkdesc">Our full-day experience, made for weddings and quinceañeras — the room is yours from setup through breakdown.</p><div class="pklist"><div class="pkli"><span class="gm"></span><span>The hall for the full day (10–12 hours)</span></div><div class="pkli"><span class="gm"></span><span>Tables &amp; chairs, full setup &amp; breakdown window</span></div><div class="pkli"><span class="gm"></span><span>Bridal / quinceañera prep space &amp; grand entrance</span></div></div><div style="margin-top:auto"><a class="btn btn-gold" href="tel:18065492577" style="width:100%%;justify-content:center">Inquire about this package</a></div></div>
+        <div class="pkg reveal"><div class="pkhead"><span class="pkcat">Intimate gathering</span><span class="pkhrs">4 hours</span></div><h3>Micro Event</h3><p class="pkdesc">Our most accessible option — ideal for showers, meetings, baptism receptions, and intimate gatherings.</p><div class="pklist"><div class="pkli"><span class="gm"></span><span>Exclusive use of the hall for 4 hours</span></div><div class="pkli"><span class="gm"></span><span>Round banquet tables &amp; chairs included</span></div><div class="pkli"><span class="gm"></span><span>Covered brick entrance &amp; parking</span></div></div><div style="margin-top:auto"><a class="btn btn-outline-ink" href="tel:18069285767" style="width:100%%;justify-content:center">Inquire about this package</a></div></div>
+        <div class="pkg reveal"><div class="pkhead"><span class="pkcat">Half-day celebration</span><span class="pkhrs">6 hours</span></div><h3>Social</h3><p class="pkdesc">A little more room to breathe — for birthdays, graduations, baby showers, and family parties.</p><div class="pklist"><div class="pkli"><span class="gm"></span><span>Exclusive use of the hall for 6 hours</span></div><div class="pkli"><span class="gm"></span><span>Tables &amp; chairs, plus 1 hour of setup access</span></div><div class="pkli"><span class="gm"></span><span>Built-in stage &amp; event lighting</span></div></div><div style="margin-top:auto"><a class="btn btn-outline-ink" href="tel:18069285767" style="width:100%%;justify-content:center">Inquire about this package</a></div></div>
+        <div class="pkg reveal"><div class="pkhead"><span class="pkcat">Evening reception</span><span class="pkhrs">8 hours</span></div><h3>Celebration</h3><p class="pkdesc">A full evening for larger receptions and milestone parties, with generous time to set up and clean up.</p><div class="pklist"><div class="pkli"><span class="gm"></span><span>Exclusive use of the hall for 8 hours</span></div><div class="pkli"><span class="gm"></span><span>Tables &amp; chairs, 2 hours of setup access</span></div><div class="pkli"><span class="gm"></span><span>Dedicated cleanup time included</span></div></div><div style="margin-top:auto"><a class="btn btn-outline-ink" href="tel:18069285767" style="width:100%%;justify-content:center">Inquire about this package</a></div></div>
+        <div class="pkg feat reveal"><span class="pkribbon">Most loved</span><div class="pkhead"><span class="pkcat">The full-day experience</span><span class="pkhrs">10–12 hrs</span></div><h3>Signature</h3><p class="pkdesc">Our full-day experience, made for weddings and quinceañeras — the room is yours from setup through breakdown.</p><div class="pklist"><div class="pkli"><span class="gm"></span><span>The hall for the full day (10–12 hours)</span></div><div class="pkli"><span class="gm"></span><span>Tables &amp; chairs, full setup &amp; breakdown window</span></div><div class="pkli"><span class="gm"></span><span>Bridal / quinceañera prep space &amp; grand entrance</span></div></div><div style="margin-top:auto"><a class="btn btn-gold" href="tel:18069285767" style="width:100%%;justify-content:center">Inquire about this package</a></div></div>
+        <div class="pkg span reveal">
+        <div class="wk">
+          <div class="wkmain">
+            <div class="pkhead"><span class="pkcat">Make a weekend of it</span><span class="pkhrs">Fri – Sun</span></div>
+            <h3>The Weekend</h3>
+            <p class="pkdesc">Reserve the venue for the whole weekend — set up or rehearse on Friday, celebrate on Saturday, and enjoy an easy morning-after tear-down on Sunday. Ideal for out-of-town families and multi-day weddings &amp; quinceañeras.</p>
+          </div>
+          <div class="wkside">
+            <div class="pklist" style="border-top:none;padding-top:0;margin-bottom:24px"><div class="pkli"><span class="gm"></span><span>Multi-day exclusive use of the hall &amp; grounds</span></div><div class="pkli"><span class="gm"></span><span>Set up Friday · celebrate Saturday · wrap up Sunday</span></div><div class="pkli"><span class="gm"></span><span>One simple weekend rate — ask for details</span></div></div>
+            <a class="btn btn-gold" href="tel:18069285767" style="width:100%;justify-content:center">Inquire about the weekend</a>
+          </div>
+        </div>
+      </div>
       </div>
     </div>
   </section>
@@ -631,7 +653,7 @@ img{max-width:100%;display:block}
           <div class="note reveal"><div class="nt">Weekday &amp; off-season value</div><p>Any package can be booked any day of the week. Midweek and off-season dates offer our friendliest rates — just ask.</p></div>
         </div>
       </div>
-      <div class="pricecall reveal d1"><span class="script">A quick word on pricing</span><p>Every event is a little different, so we keep pricing transparent and personal. Tell us your date, your guest count, and the hours you need — we’ll send a clear, honest quote, usually within the hour.</p><a class="btn btn-cream" href="tel:18065492577">Call or Text (806) 549-2577</a></div>
+      <div class="pricecall reveal d1"><span class="script">A quick word on pricing</span><p>Every event is a little different, so we keep pricing transparent and personal. Tell us your date, your guest count, and the hours you need — we’ll send a clear, honest quote, usually within the hour.</p><a class="btn btn-cream" href="tel:18069285767">Call or Text (806) 928-5767</a></div>
     </div>
   </section>
 
@@ -641,7 +663,7 @@ img{max-width:100%;display:block}
       <span class="script reveal">Ready when you are</span>
       <h2 class="reveal d1">Let’s find your date</h2>
       <p class="reveal d1">Share your event and guest count and we’ll match you with the right package — no pressure, just honest help.</p>
-      <div class="reveal d2" style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap"><a class="btn btn-cream" href="tel:18065492577">Call or Text (806) 549-2577</a><a class="btn btn-outline" href="Contact.html">Request a tour</a></div>
+      <div class="reveal d2" style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap"><a class="btn btn-cream" href="tel:18069285767">Call or Text (806) 928-5767</a><a class="btn btn-outline" href="Contact.html">Request a tour</a></div>
     </div>
   </section>
 
@@ -663,7 +685,7 @@ img{max-width:100%;display:block}
             <a href="Contact.html">Contact</a>
           </div></div>
         <div class="fcol"><h4>Visit</h4><p>1809 N Ash<br>Lubbock, TX 79415</p><p style="color:#9A9384;margin-top:16px">Open by appointment,<br>seven days a week</p></div>
-        <div class="fcol"><h4>Contact</h4><div class="flist"><a href="tel:18065492577">(806) 549-2577</a><a href="mailto:jana@poka.com">jana@poka.com</a></div></div>
+        <div class="fcol"><h4>Contact</h4><div class="flist"><a href="tel:18069285767">(806) 928-5767</a><a href="mailto:jana@poka.com">jana@poka.com</a></div></div>
       </div>
       <div class="fbottom"><span>© 2026 Carabajal Event Center · Lubbock, Texas</span><span>Family-owned <span class="heart">&#9829;</span> Proudly serving West Texas</span></div>
     </div>

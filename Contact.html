@@ -3,9 +3,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Contact | Carabajal Event Center · Lubbock, TX</title>
-<meta name="description" content="Check your date at Carabajal Event Center. Call or text (806) 549-2577, or send a note. 1809 N Ash, Lubbock, TX 79415.">
+<meta name="description" content="Check your date at Carabajal Event Center. Call or text (806) 928-5767, or send a note. 1809 N Ash, Lubbock, TX 79415.">
 <meta property="og:title" content="Contact | Carabajal Event Center · Lubbock, TX">
-<meta property="og:description" content="Check your date at Carabajal Event Center. Call or text (806) 549-2577, or send a note. 1809 N Ash, Lubbock, TX 79415.">
+<meta property="og:description" content="Check your date at Carabajal Event Center. Call or text (806) 928-5767, or send a note. 1809 N Ash, Lubbock, TX 79415.">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2315140F'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' fill='%23C9A227' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -507,7 +507,9 @@ img{max-width:100%;display:block}
 .cta.solid .cta-grad{background:radial-gradient(80% 90% at 50% 120%,rgba(201,162,39,.30),transparent 60%)}
 
 /* signature script accent under text */
-.sig{font-family:'Pinyon Script',cursive;font-size:42px;color:var(--ink);line-height:1;display:inline-block}
+.sig{font-family:'Pinyon Script',cursive;font-size:29px;color:var(--ink);line-height:1;display:inline-block;
+  position:relative;transform:rotate(-3deg);transform-origin:left center;padding:0 10px 7px 2px;margin-top:4px}
+.sig::after{content:"";position:absolute;left:2px;right:14px;bottom:2px;height:1px;background:linear-gradient(90deg,var(--gold),rgba(201,162,39,0))}
 
 /* 4-up card row (home packages teaser) — responsive */
 .cards.cards4{grid-template-columns:repeat(4,1fr)}
@@ -517,7 +519,7 @@ img{max-width:100%;display:block}
 @media(max-width:420px){.statline{grid-template-columns:1fr 1fr}}
 
 /* ===================== MOBILE OVERHAUL ===================== */
-.sec-occ{padding:0 0 120px}
+.sec-occ{padding:60px 0 120px}
 @media(max-width:900px){
   /* remove decorative gold geometry + floating badges that crowd/overlap copy */
   .framed .fbar,.why-figure .frame,.why-figure .corner,.why-badge,.gstrip .gc .gring,.occ .oring{display:none!important}
@@ -575,6 +577,13 @@ img{max-width:100%;display:block}
   .hero-chips .btn,.btn{font-size:12px;letter-spacing:.14em}
 }
 
+/* full-width "The Weekend" package */
+.pkg.span{grid-column:1/-1;display:block;background:linear-gradient(180deg,#FFFDF6,#FBF4E2);border-color:rgba(201,162,39,.32)}
+.pkg.span .wk{display:grid;grid-template-columns:1.08fr 1fr;gap:48px;align-items:center}
+.pkg.span h3{margin-bottom:10px}
+.pkg.span .pkdesc{margin-bottom:0}
+@media(max-width:760px){.pkg.span .wk{grid-template-columns:1fr;gap:22px}}
+
 </style>
 </head>
 <body>
@@ -594,7 +603,7 @@ img{max-width:100%;display:block}
         <a class="lnk" href="Packages.html">Packages</a>
         <a class="lnk" href="Gallery.html">Gallery</a>
         <a class="lnk active" href="Contact.html">Contact</a>
-        <a class="callbtn" href="tel:18065492577">(806) 549-2577</a>
+        <a class="callbtn" href="tel:18069285767">(806) 928-5767</a>
       </nav>
     </div>
   </header>
@@ -612,7 +621,7 @@ img{max-width:100%;display:block}
   <section class="section bg-cream" style="padding:30px 0 110px">
     <div class="wrap contact-grid">
       <div class="cstack">
-        <a href="tel:18065492577" class="ccard dark reveal"><div class="ct">Call or Text</div><div class="cv" style="font-size:32px">(806) 549-2577</div><div class="cnote">The quickest way to reach us</div></a>
+        <a href="tel:18069285767" class="ccard dark reveal"><div class="ct">Call or Text</div><div class="cv" style="font-size:32px">(806) 928-5767</div><div class="cnote">The quickest way to reach us</div></a>
         <div class="ccard reveal d1"><div class="ct">Email</div><a href="mailto:jana@poka.com" class="cv" style="display:block">jana@poka.com</a></div>
         <div class="ccard reveal d1"><div class="ct">Visit the venue</div><div class="cv">1809 N Ash<br>Lubbock, TX 79415</div><a href="https://maps.google.com/?q=1809+N+Ash+Lubbock+TX+79415" target="_blank" class="txt-link" style="margin-top:14px;font-size:12px">Open in maps →</a></div>
         <div class="ccard reveal d2"><div class="ct">Hours</div><div style="font-weight:300;font-size:15px;line-height:1.9;color:#3C382F">Tours &amp; events, seven days a week<br>By appointment — just reach out</div></div>
@@ -635,7 +644,7 @@ img{max-width:100%;display:block}
         <div class="field" style="margin-bottom:20px"><label>Approximate guest count</label><input type="text" name="Guest count" placeholder="e.g. 100 guests"></div>
         <div class="field" style="margin-bottom:28px"><label>Tell us about your event</label><textarea rows="4" name="Message" placeholder="The day you have in mind, any questions, anything we should know…"></textarea></div>
         <button type="submit" class="btn btn-ink" style="width:100%;justify-content:center">Send my request</button>
-        <p class="formnote">Prefer to talk now? Call or text <a href="tel:18065492577">(806) 549-2577</a></p>
+        <p class="formnote">Prefer to talk now? Call or text <a href="tel:18069285767">(806) 928-5767</a></p>
       </form>
     </div>
   </section>
@@ -658,7 +667,7 @@ img{max-width:100%;display:block}
             <a href="Contact.html">Contact</a>
           </div></div>
         <div class="fcol"><h4>Visit</h4><p>1809 N Ash<br>Lubbock, TX 79415</p><p style="color:#9A9384;margin-top:16px">Open by appointment,<br>seven days a week</p></div>
-        <div class="fcol"><h4>Contact</h4><div class="flist"><a href="tel:18065492577">(806) 549-2577</a><a href="mailto:jana@poka.com">jana@poka.com</a></div></div>
+        <div class="fcol"><h4>Contact</h4><div class="flist"><a href="tel:18069285767">(806) 928-5767</a><a href="mailto:jana@poka.com">jana@poka.com</a></div></div>
       </div>
       <div class="fbottom"><span>© 2026 Carabajal Event Center · Lubbock, Texas</span><span>Family-owned <span class="heart">&#9829;</span> Proudly serving West Texas</span></div>
     </div>
